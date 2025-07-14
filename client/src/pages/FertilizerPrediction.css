@@ -1,0 +1,92 @@
+.fertilizer-page {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f9fa;
+}
+
+.fertilizer-page.centered {
+  justify-content: center;
+}
+
+.fertilizer-form-container,
+.fertilizer-result-container {
+  flex: 1;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(44, 62, 80, 0.08);
+  max-width: 600px;
+}
+
+.fertilizer-form-container h2 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 0.3rem;
+  font-weight: 500;
+  color: #2c3e50;
+}
+
+.form-group input,
+.form-group select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.fertilizer-button {
+  padding: 0.6rem 1.2rem;
+  background-color: #2c3e50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
+
+.fertilizer-button:hover {
+  background-color: #1b2a3b;
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.fertilizer-result-container h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.fertilizer-result-container ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.fertilizer-result-container li {
+  background-color: #eef3f6;
+  margin-bottom: 0.5rem;
+  padding: 0.6rem;
+  border-radius: 5px;
+}

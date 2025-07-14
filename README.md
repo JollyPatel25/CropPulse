@@ -1,0 +1,2 @@
+# CropPulse
+CropPulse is an AI-powered Smart Crop Advisory System designed to assist farmers and agricultural experts in making informed decisions. The platform provides intelligent recommendations for crop selection, fertilizer application, and disease detection based on user inputs such as soil nutrients, weather, and crop images. It features a user-friendly interface for farmers and a robust admin dashboard for managing datasets and training machine learning models, ensuring data-driven agriculture at scale.

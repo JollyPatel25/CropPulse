@@ -1,0 +1,101 @@
+.crop-page {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+.crop-form-container {
+  flex: 1;
+  max-width: 500px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 2rem;
+  background-color: #fdfdfd;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.crop-form-container h2 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+}
+
+.crop-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.form-group {
+  flex: 1 1 48%;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-weight: 500;
+  margin-bottom: 4px;
+  color: #333;
+}
+
+.form-group input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #aaa;
+  border-radius: 6px;
+}
+
+.crop-form button {
+  margin-top: 1.5rem;
+  width: 100%;
+  padding: 0.7rem;
+  font-size: 1rem;
+  background-color: #2c3e50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.crop-form button:hover {
+  background-color: #1e2e3a;
+}
+
+.error-msg {
+  color: red;
+  margin-top: 1rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.result-box {
+  flex: 1;
+  max-width: 400px;
+  background-color: #f0f8ff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.result-box h3 {
+  margin-bottom: 1rem;
+  color: #2c3e50;
+  text-align: center;
+}
+
+.result-box ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.result-box li {
+  margin: 0.4rem 0;
+  font-size: 1rem;
+}

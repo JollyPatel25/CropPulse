@@ -1,0 +1,44 @@
+import kagglehub
+import zipfile
+import os
+import shutil
+
+def refresh_fertilizer_data():
+    try:
+        print("Starting fertilizer dataset refresh...")
+
+        base_dir = os.path.dirname(os.path.abspath(__file__))  # utils/
+        server_dir = os.path.abspath(os.path.join(base_dir, ".."))
+        target_dir = os.path.join(server_dir, "data", "fertilizer")
+
+        # Step 1: Download dataset from KaggleHub
+        path = kagglehub.dataset_download("gdabhishek/fertilizer-prediction")
+        print(f" Dataset downloaded to: {path}")
+        print(f" Files in downloaded path: {os.listdir(path)}")
+
+        # Step 2: Remove existing data
+        if os.path.exists(target_dir):
+            print(f" Removing existing directory: {target_dir}")
+            shutil.rmtree(target_dir)
+
+        os.makedirs(target_dir, exist_ok=True)
+        print(f" Created fresh directory: {target_dir}")
+
+        # Step 3: Extract or copy files
+        for file in os.listdir(path):
+            full_path = os.path.join(path, file)
+            if file.endswith('.zip'):
+                print(f" Extracting: {file}")
+                with zipfile.ZipFile(full_path, 'r') as zip_ref:
+                    zip_ref.extractall(target_dir)
+                print(f" Extracted {file}")
+            else:
+                print(f" Copying file: {file}")
+                shutil.copy(full_path, target_dir)
+                print(f" Copied {file}")
+
+        print("Fertilizer dataset refresh completed successfully.")
+
+    except Exception as e:
+        print("Error during fertilizer dataset refresh:", str(e))
+        raise
