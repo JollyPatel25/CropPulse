@@ -26,7 +26,7 @@ keras==2.13.1
 libclang==18.1.1
 Markdown==3.8.2
 MarkupSafe==3.0.2
-numpy==1.24.4
+numpy>=1.22,<1.24.4
 oauthlib==3.3.1
 opt_einsum==3.4.0
 packaging==25.0
