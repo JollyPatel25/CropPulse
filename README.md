@@ -1,54 +1,82 @@
-<<<<<<< HEAD
-# CropPulse
-CropPulse is an AI-powered Smart Crop Advisory System designed to assist farmers and agricultural experts in making informed decisions. The platform provides intelligent recommendations for crop selection, fertilizer application, and disease detection based on user inputs such as soil nutrients, weather, and crop images. It features a user-friendly interface for farmers and a robust admin dashboard for managing datasets and training machine learning models, ensuring data-driven agriculture at scale.
-=======
 # 🌿 CropPulse - Smart Crop Advisory System
-CropPulse is an AI-powered smart crop advisory system that recommends the best crops, suitable fertilizers, and detects plant diseases using ML models. It provides a user-friendly interface for farmers and an admin dashboard for managing datasets and retraining models, enabling data-driven agriculture.
----
 
-## 📌 Features
-
-- 🌱 **Crop Recommendation** – Suggests the most suitable crop based on soil nutrients and weather conditions.
-- 💊 **Fertilizer Prediction** – Recommends the best fertilizer using NPK values, soil type, and crop type.
-- 🦠 **Plant Disease Detection** – Identifies crop diseases from leaf images using a pre-trained deep learning model.
-- 👨‍🌾 **User Panel** – Register/login with JWT auth, update profile with photo.
-- 🛠 **Admin Panel** – Upload and retrain datasets for crop/fertilizer modules.
-- 🧠 **AI Models** – Integrated ML and DL models for prediction and classification.
-- 📦 **MongoDB Integration** – Stores user data and profile information securely.
-- 🔐 **JWT Authentication** – Token-based secure login system.
+**CropPulse** is an AI-powered smart crop advisory system that assists farmers and agricultural experts in making informed, data-driven decisions. It offers intelligent crop recommendations, fertilizer suggestions, and plant disease detection—all through an intuitive interface designed for both farmers and admins.
 
 ---
 
-## 🧪 Technologies Used
+## 📌 Key Features
 
-- **Frontend**: React.js, Tailwind CSS
-- **Backend**: Flask, Flask-JWT-Extended
-- **Database**: MongoDB Atlas
-- **ML/DL**: Scikit-learn, TensorFlow, OpenCV, NumPy
-- **Others**: JWT Auth, Python dotenv, CORS, RESTful APIs
+- 🌱 **Crop Recommendation**  
+  Suggests the most suitable crop based on soil nutrients (NPK), pH, temperature, humidity, and rainfall.
+
+- 💊 **Fertilizer Prediction**  
+  Recommends optimal fertilizers based on soil type, crop type, and nutrient values.
+
+- 🦠 **Plant Disease Detection**  
+  Detects diseases in crops from leaf images using a deep learning model trained on the PlantVillage dataset.
+
+- 👨‍🌾 **User Panel**  
+  - Secure registration and login (JWT-based)  
+  - Update profile, including personal details and profile picture
+
+- 🛠 **Admin Panel**  
+  - Upload and manage crop and fertilizer datasets  
+  - Trigger model retraining for better accuracy
+
+- 🔐 **Authentication**  
+  JWT-secured API endpoints with MongoDB-based user storage.
+
+---
+---
+
+## 🧾 MongoDB Schema
+
+### 📂 Collection: `users`
+
+Each user is stored as a document in the `users` collection with the following schema:
+
+```json
+{
+  "_id": ObjectId,
+  "email": String,
+  "password": String,        // Hashed using scrypt
+  "name": String,
+  "birth_date": String,      // Format: YYYY-MM-DD
+  "address": {
+    "street": String,
+    "city": String,
+    "state": String,
+    "pincode": String
+  },
+  "role": String,            // "user" or "admin"
+  "profile_image": String    // Filename of the uploaded image (stored in /uploads)
+}
+
+## 🧠 Tech Stack
+
+- **Frontend**: React.js, Tailwind CSS  
+- **Backend**: Flask, Flask-JWT-Extended  
+- **Database**: MongoDB (local/Atlas)  
+- **Machine Learning**: Scikit-learn, TensorFlow, OpenCV  
+- **Others**: JWT, dotenv, CORS, REST API
 
 ---
 
 ## 🗂 Dataset Sources
 
-- **Crop Recommendation Dataset**  
-  🔗 [Crop Recommendation - Kaggle](https://www.kaggle.com/datasets/atharvaingle/crop-recommendation-dataset)
+- 🌾 [Crop Recommendation Dataset – Kaggle](https://www.kaggle.com/datasets/atharvaingle/crop-recommendation-dataset)  
+- 💊 [Fertilizer Recommendation Dataset – Kaggle](https://www.kaggle.com/datasets/gdabhishek/fertilizer-prediction)  
+- 🦠 [Plant Disease Detection (PlantVillage) – Kaggle](https://www.kaggle.com/models/agripredict/disease-classification)
 
-- **Fertilizer Recommendation Dataset**  
-  🔗 [Fertilizer Recommendation - Kaggle](https://www.kaggle.com/datasets/gdabhishek/fertilizer-prediction)
-
-- **Plant Disease Detection Dataset**  
-  🔗 [PlantVillage Dataset - Kaggle](https://www.kaggle.com/models/agripredict/disease-classification)
-
-> 🧠 Plant Disease Detection is powered by a pre-trained deep learning model trained on the PlantVillage dataset and exported in `.pb` format.
+> 🧠 Disease Detection is powered by a pre-trained `.pb` TensorFlow model trained on PlantVillage.
 
 ---
-
+### NOTE:
+### This project requires a working MongoDB connection. If you don’t provide a valid .env file with a working MongoDB URI, the backend will fail to connect and you'll receive errors. Use your own MongoDB Atlas or local connection string.
 ## 🚀 Installation & Setup
 
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/croppulse.git
-cd croppulse
->>>>>>> e21d96d2ffa695aca8d4c3a9c90a3b9ba07ebfc8
+git clone https://github.com/your-username/CropPulse.git
+cd CropPulse
