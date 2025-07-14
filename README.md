@@ -27,6 +27,30 @@
   JWT-secured API endpoints with MongoDB-based user storage.
 
 ---
+---
+
+## 🧾 MongoDB Schema
+
+### 📂 Collection: `users`
+
+Each user is stored as a document in the `users` collection with the following schema:
+
+```json
+{
+  "_id": ObjectId,
+  "email": String,
+  "password": String,        // Hashed using scrypt
+  "name": String,
+  "birth_date": String,      // Format: YYYY-MM-DD
+  "address": {
+    "street": String,
+    "city": String,
+    "state": String,
+    "pincode": String
+  },
+  "role": String,            // "user" or "admin"
+  "profile_image": String    // Filename of the uploaded image (stored in /uploads)
+}
 
 ## 🧠 Tech Stack
 
