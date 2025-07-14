@@ -51,6 +51,7 @@ Each user is stored as a document in the `users` collection with the following s
   "role": String,            // "user" or "admin"
   "profile_image": String    // Filename of the uploaded image (stored in /uploads)
 }
+```
 
 ## 🧠 Tech Stack
 
