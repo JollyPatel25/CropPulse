@@ -47,7 +47,8 @@
 > 🧠 Disease Detection is powered by a pre-trained `.pb` TensorFlow model trained on PlantVillage.
 
 ---
-
+###NOTE:
+###This project requires a working MongoDB connection. If you don’t provide a valid .env file with a working MongoDB URI, the backend will fail to connect and you'll receive errors. Use your own MongoDB Atlas or local connection string.
 ## 🚀 Installation & Setup
 
 ### 1. Clone the Repository
