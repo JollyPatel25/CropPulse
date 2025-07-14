@@ -78,5 +78,5 @@ Each user is stored as a document in the `users` collection with the following s
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/CropPulse.git
+git clone https://github.com/jollypatel25/CropPulse.git
 cd CropPulse
