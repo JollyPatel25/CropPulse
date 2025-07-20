@@ -27,30 +27,30 @@
   JWT-secured API endpoints with MongoDB-based user storage.
 
 ---
----
-
 ## 🧾 MongoDB Schema
 
 ### 📂 Collection: `users`
 
 Each user is stored as a document in the `users` collection with the following schema:
 
-```json
+```js
 {
-  "_id": ObjectId,
-  "email": String,
-  "password": String,        // Hashed using scrypt
-  "name": String,
-  "birth_date": String,      // Format: YYYY-MM-DD
-  "address": {
-    "street": String,
-    "city": String,
-    "state": String,
-    "pincode": String
+  _id: ObjectId,                  // MongoDB ObjectId
+  email: String,                  // User's email
+  password: String,               // Hashed using scrypt
+  name: String,                   // Full name
+  birth_date: String,            // Format: YYYY-MM-DD
+  address: {
+    street: String,              // Street name
+    city: String,                // City name
+    state: String,               // State name
+    pincode: String              // Postal code
   },
-  "role": String,            // "user" or "admin"
-  "profile_image": String    // Filename of the uploaded image (stored in /uploads)
+  role: String,                   // "user" or "admin"
+  profile_image: String           // Filename of the uploaded image (stored in /uploads)
 }
+```
+
 
 ## 🧠 Tech Stack
 
@@ -78,5 +78,5 @@ Each user is stored as a document in the `users` collection with the following s
 ### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/your-username/CropPulse.git
+git clone https://github.com/jollypatel25/CropPulse.git
 cd CropPulse
