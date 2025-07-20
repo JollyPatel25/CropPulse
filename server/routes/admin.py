@@ -24,7 +24,7 @@ def refresh_data():
 
     try:
         from utils.refresh_crop_data import refresh_crop_data
-        print("Refreshing dataset...")
+        print("Refreshing dataset...", flush=True)
         refresh_crop_data()
         return jsonify({"message": "Dataset refreshed"}), 200
     except Exception as e:
